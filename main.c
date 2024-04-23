@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main (void){
-	unsigned long long int N = 0, resultado = 1;
-	int zeros = 0, i = 10, cont;
-	scanf("%lld", &N);
+	unsigned long long int N = 0;
+	int zeros = 0, i = 10;
+	scanf("%llu", &N);
 
-	for (cont = 1;cont <= N;cont++){
+	/*for (cont = 1;cont <= N;cont++){
 		resultado = resultado * cont;
 	}
 
@@ -17,6 +17,10 @@ int main (void){
 		else{
 			break;
 		}
+	}*/
+
+	for (i = 5; i <= N; i*=5){
+	zeros += N / i;
 	}
 
 	printf("%d", zeros);
